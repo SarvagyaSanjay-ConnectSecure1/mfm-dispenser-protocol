@@ -1,0 +1,24 @@
+Register Address,Function Code,Data Type,Register Name,Unit,Scale,Minimum,Maximum,Access,Side/Hose,Description
+0100,3,U16,Status Bits,-,-,0,65535,RO,All,Push-to-start status; stop button; MFM status; trip indicator; Bank1/2/3 activation bits
+0101,3,U16,Unit Price,Currency,0.01,0,6553.5,RO,All,Current unit price for volumetric or mass measurement
+0102,3,U32_H,Current Delivery Quantity,kg,0.001,0,4294967.295,RO,All,High word of 32-bit quantity dispensed in current transaction
+0103,3,U32_L,Current Delivery Quantity,kg,0.001,0,4294967.295,RO,All,Low word of 32-bit quantity dispensed in current transaction
+0104,3,U32_H,Current Delivery Amount,Currency,0.01,0,42949672.95,RO,All,High word of 32-bit monetary value of current transaction
+0105,3,U32_L,Current Delivery Amount,Currency,0.01,0,42949672.95,RO,All,Low word of 32-bit monetary value of current transaction
+0106,3,BCD12_B0,Total Hose Quantity Totalizer,kg,0.001,0,999999999.999,RO,Per Hose,BCD12 total quantity (byte 0) - cumulative on this hose/nozzle
+0107,3,BCD12_B1,Total Hose Quantity Totalizer,kg,0.001,0,999999999.999,RO,Per Hose,BCD12 total quantity (byte 1-2)
+0108,3,BCD12_B2,Total Hose Quantity Totalizer,kg,0.001,0,999999999.999,RO,Per Hose,BCD12 total quantity (byte 3-5) - 6 bytes total for complete BCD12 value
+0109,3,BCD12_B0,Total Hose Monetary Totalizer,Currency,0.01,0,9999999.99,RO,Per Hose,BCD12 total monetary (byte 0) - cumulative on this hose/nozzle
+0110,3,BCD12_B1,Total Hose Monetary Totalizer,Currency,0.01,0,9999999.99,RO,Per Hose,BCD12 total monetary (byte 1-2)
+0111,3,BCD12_B2,Total Hose Monetary Totalizer,Currency,0.01,0,9999999.99,RO,Per Hose,BCD12 total monetary (byte 3-5) - 6 bytes total for complete BCD12 value
+0112,3,U16,Dispenser Pressure,bar,0.01,0,655.35,RO,All,Current gas pressure at dispenser outlet
+0113,3,U16,Flow Rate,kg/min,0.01,0,655.35,RO,All,Current gas flow rate during dispensing
+0114,3,U16,Error Status Bits,-,-,0,65535,RO,All,Reverse flow; MFM fault; T/P board disconnect; pressure probe fault; temperature probe fault; overpressure; underpressure bits
+0115,3,INT16,Ambient Temperature,°C,0.1,-3276.8,3276.7,RO,All,External/ambient temperature measurement (signed 16-bit)
+0116,3,INT16,Gas Temperature,°C,0.1,-3276.8,3276.7,RO,All,Gas temperature at dispenser outlet (signed 16-bit)
+0200,3,U16,Dispenser Lock Control,-,1,0,1,RW,All,0=free/unlocked; 1=locked (prevents operation)
+0201,3,U16,Unit Price Setting,Currency,0.01,0,6553.5,RW,All,New unit price to apply (applied when dispenser idle/reset)
+0202,3,U16,Target Fill Pressure,bar,0.01,0,655.35,RW,All,Desired final pressure for fill completion
+0203,3,U16,Maximum Fill Pressure,bar,0.01,0,655.35,RW,All,Safety limit; maximum allowed pressure on hose
+0204,3,U16,Bank Sequencing Param 1,%,1,0,100,RW,All,Flow percentage threshold for transitioning between pressure banks
+0205,3,U16,Bank Sequencing Param 2,kg/min,0.01,0,655.35,RW,All,Minimum flow rate threshold for high pressure bank activation
