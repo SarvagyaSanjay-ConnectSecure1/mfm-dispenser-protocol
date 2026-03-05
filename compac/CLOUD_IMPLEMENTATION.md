@@ -2,7 +2,7 @@
 
 ## Overview
 
-This guide provides cloud-side parsing examples for telemetry data received from Compac CNG dispenser units connected via ESP32 IoT Hub. The key challenge is handling **BCD12-encoded totalizer values** which require special parsing before numeric conversion.
+Insights about cloud-side parsing examples for telemetry data received from Compac CNG dispenser units connected via ESP32 IoT Hub. The key challenge is handling **BCD12-encoded totalizer values** which require special parsing before numeric conversion.
 
 ---
 
@@ -799,4 +799,5 @@ WHERE
 - BCD Encoding: ISO 6093
 - Azure IoT Hub: [Microsoft Docs](https://docs.microsoft.com/en-us/azure/iot-hub/)
 - Stream Analytics: [Query Language Reference](https://docs.microsoft.com/en-us/stream-analytics-query/stream-analytics-query-language-reference)
+
 
