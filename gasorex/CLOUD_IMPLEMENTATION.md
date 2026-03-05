@@ -2,7 +2,7 @@
 
 ## Overview
 
-This document provides guidance for implementing cloud-side (Azure backend) logic to parse raw Modbus telemetry from the Gasorex SR Energy dispenser system and convert it into actionable business metrics.
+Implementing cloud-side (Azure backend) logic to parse raw Modbus telemetry from the Gasorex SR Energy dispenser system.
 
 ---
 
@@ -520,3 +520,4 @@ test('Decode error flags correctly', () => {
 - [Gasorex PROTOCOL.md](PROTOCOL.md) - Full protocol specification
 - IEEE 754: Single-precision floating-point format
 - Modbus RTU Standard: IEC 61158-2
+
