@@ -1,0 +1,19 @@
+{
+  "ro_code": "COMPAC_CNG_STATION_A_HOSE_1",
+  "c_id": 4001,
+  "c_make": "Compac_CNG_Dispenser",
+  "c_model": "Standard_CNG_Dispenser",
+  "post_interval": 30,
+  "status_interval": 900,
+  "mbus_RTU": {
+    "slave": 1,
+    "baud": 9600,
+    "dataBits": 8,
+    "parity": "N",
+    "stopBits": 1
+  },
+  "m": [
+    256,
+    16
+  ]
+}
